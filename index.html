@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Menu Dinâmico</title>
+   <style>
+      *{
+         line-height: 50px;
+      }
+
+      .active{
+         margin: 40px;
+         padding: 20px;
+         background-color: red;
+         color: white;
+      }
+
+      .deActive{
+         color: blue;
+      }
+
+   </style>
+</head>
+<body>
+   <ul id="menu">
+      <li><a id='item1' href="#" onclick="activeItem1('item1')">item 1</a></li>
+      <li><a id='item2' href="#" onclick="activeItem2('item2')">item 2</a></li>
+      <li><a id='item3' href="#" onclick="activeItem3('item3')">item 3</a></li>
+   </ul>
+   <script>
+     
+     const activeItem1 = (id) => {
+        document.getElementById(id).classList.add('active')
+        remove('item2')
+        remove('item3')
+     }
+     const activeItem2 = (id) => {
+        document.getElementById(id).classList.add('active')
+         remove('item1')
+         remove('item3')
+      }
+     const activeItem3 = (id) => {
+        document.getElementById(id).classList.add('active')
+         remove('item1')
+         remove('item2')
+      }
+
+     const remove = (id) => {
+        document.getElementById(id).classList.remove('active')
+     }
+
+   </script>
+   
+</body>
+</html>

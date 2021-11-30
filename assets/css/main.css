@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: 0;
+    list-style: none;
+    color: #fff;
+    font-family: "Open sans", sans-serif;
+    font-size: 1rem;
+}
+
+body{
+    background-color: #ccc;
+}
+
+header{
+    background: url("../img/background-header.jpg") no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.header-container, .menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-container{
+    padding: 30px 20px 0 20px;
+}
+
+.menu li{
+    padding-left: 10px;
+}
+
+.menu a{
+    display: block;
+    padding: 10px;
+}
+
+.menu a:hover, .menu a.active, .item button, .item button:hover{
+    background-color: rgba(84,209,84,.5);
+    color: green;
+    border: 0;
+    border-radius: 5px;
+    transition: all ease .5s;
+}
+
+.item{
+    padding-top: 200px;
+    text-align: center;
+}
+
+.item h1{
+    font-size: 2.5rem;
+}
+
+.item button{
+    background-color: rgb(84,209,84);
+    border-radius: 30px;
+    color: #fff;
+    margin-top: 5px;
+    padding: 10px 30px;
+    
+}
+
+.item button:hover{
+    border-radius: 30px;
+}
